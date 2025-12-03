@@ -1,0 +1,35 @@
+# .gitignore for Jekyll GitHub Pages
+
+# Jekyll 构建的网站输出目录
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# 依赖项目录
+vendor/
+.bundle/
+
+# 环境变量和敏感文件
+.env
+.env.local
+.env.*.local
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+*.swp
+*~
+*.lock
+
+# 编辑器目录 (按需取消注释)
+# .vscode/
+# .idea/
+# *.swp
+# *~
+
+# 本地日志和调试文件
+*.log
+debug.log
+
+# Ruby 版本管理文件
+.ruby-version
