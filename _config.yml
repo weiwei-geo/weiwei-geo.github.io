@@ -11,7 +11,7 @@ plugins:
   - jekyll-feed                   # 可选：为文章生成 RSS 订阅源
   - jekyll-seo-tag                # 可选：添加 SEO 优化标签
 
-avatar: /assets/images/avatar.jpg #
+logo: /assets/images/avatar.jpg #
 
 toc: true # 全局启用文章目录
 
