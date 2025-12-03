@@ -1,3 +1,16 @@
-theme: jekyll-theme-minimal
-title: Weiwei-Geo  # 可选：添加网站标题
-description: This is my website.  # 可选：添加网站描述
+# _config.yml
+# 网站核心配置
+title: Weiwei-Geo           # 你的网站标题
+description: "生命是一棵长满可能的树🌲"          # 网站描述
+baseurl: ""                       # 如果你的站点不是托管在域名根目录，请填写子路径，如 "/blog"。通常个人主页留空。
+url: "https://weiwei-geo.github.io" # 请替换为你的 GitHub Pages 地址
+theme: jekyll-theme-minimal        # 使用 Minimal 主题
+
+# GitHub Pages 构建设置
+plugins:
+  - jekyll-feed                   # 可选：为文章生成 RSS 订阅源
+  - jekyll-seo-tag                # 可选：添加 SEO 优化标签
+
+# 自定义变量（可选，可在页面中用 {{ site.my_custom_var }} 引用）
+author: "weiwei"
+github_username: weiwei-geo
