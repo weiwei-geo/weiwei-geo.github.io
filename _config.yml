@@ -11,6 +11,23 @@ plugins:
   - jekyll-feed                   # 可选：为文章生成 RSS 订阅源
   - jekyll-seo-tag                # 可选：添加 SEO 优化标签
 
+avatar: "/assets/images/avatar.jpg"
+
+toc: true # 全局启用文章目录
+
+# 社媒
+social:
+  name:
+  email:
+  links:
+    -""
+
 # 自定义变量（可选，可在页面中用 {{ site.my_custom_var }} 引用）
-author: "weiwei"
-github_username: weiwei-geo
+# 设置默认布局（可选）
+defaults:
+  - scope:
+      path: ""            # 路径为空表示适用于所有文件
+      type: "posts"       # 指定类型为“文章”
+    values:
+      layout: "post"      # 为所有文章应用“post”布局
+      author: "weiwei"    # 为所有文章设置默认作者
