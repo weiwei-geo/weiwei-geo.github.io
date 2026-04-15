@@ -1,37 +1,30 @@
 # _config.yml
-# 网站核心配置
-title: Weiwei-Geo           # 你的网站标题
-description: “生命是一棵长满可能的树🌲”          # 网站描述
-baseurl: “”                       # 如果你的站点不是托管在域名根目录，请填写子路径，如 “/blog”。通常个人主页留空。
-url: “https://weiwei-geo.github.io” # 请替换为你的 GitHub Pages 地址
+# Site configuration
 
-# 自定义配置
-avatar: “/assets/images/avatar.jpg”
+title: Weiwei-Geo
+description: "Life is a tree full of possibilities"
+baseurl: ""
+url: "https://weiwei-geo.github.io"
+
+# Custom settings
+avatar: "/assets/images/avatar.jpg"
 toc: true
 
-# 社媒
-social:
-  name:
-  email:
-  links: []
-
-# Markdown 渲染
+# Markdown settings
 markdown: kramdown
 highlighter: rouge
-
-#  permalink 格式
 permalink: /posts/:year/:month/:day/:title/
 
-# GitHub Pages 构建设置
+# GitHub Pages plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 默认布局
+# Defaults
 defaults:
   - scope:
-      path: “”
-      type: “posts”
+      path: ""
+      type: "posts"
     values:
       layout: post
       author: weiwei

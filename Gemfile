@@ -1,5 +1,5 @@
 source "https://gems.jekyllrb.com"
 
-gem "jekyll"
-gem "jekyll-feed"
-gem "jekyll-seo-tag"
+gem "jekyll", "~> 3.10"
+gem "jekyll-feed", "~> 0.15"
+gem "jekyll-seo-tag", "~> 2.7"
