@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+
+  {% if site.avatar %}
+  <link rel="icon" href="{{ site.avatar }}">
+  {% endif %}
+
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% if site.custom_css %}
+  <link rel="stylesheet" href="{{ site.custom_css }}">
+  {% endif %}
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      {% if site.avatar %}
+      <a class="avatar" href="{{ '/' | relative_url }}">
+        <img src="{{ site.avatar }}" alt="{{ site.title }}">
+      </a>
+      {% endif %}
+
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+
+      {% if site.description %}
+      <p>{{ site.description }}</p>
+      {% endif %}
+
+      <nav>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/posts/' | relative_url }}">Posts</a></li>
+          {% if site.social.links %}
+          {% for link in site.social.links %}
+          <li><a href="{{ link }}">{{ link | replace: 'https://', '' | replace: 'http://', '' }}</a></li>
+          {% endfor %}
+          {% endif %}
+        </ul>
+      </nav>
+    </header>
+
+    <section class="content">
+      {{ content }}
+    </section>
+
+    <footer>
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}</p>
+    </footer>
+  </div>
+</body>
+</html>

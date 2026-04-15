@@ -1,33 +1,37 @@
 # _config.yml
 # 网站核心配置
 title: Weiwei-Geo           # 你的网站标题
-description: "生命是一棵长满可能的树🌲"          # 网站描述
-baseurl: ""                       # 如果你的站点不是托管在域名根目录，请填写子路径，如 "/blog"。通常个人主页留空。
-url: "https://weiwei-geo.github.io" # 请替换为你的 GitHub Pages 地址
-theme: jekyll-theme-minimal        # 使用 Minimal 主题
+description: “生命是一棵长满可能的树🌲”          # 网站描述
+baseurl: “”                       # 如果你的站点不是托管在域名根目录，请填写子路径，如 “/blog”。通常个人主页留空。
+url: “https://weiwei-geo.github.io” # 请替换为你的 GitHub Pages 地址
 
-# GitHub Pages 构建设置
-plugins:
-  - jekyll-feed                   # 可选：为文章生成 RSS 订阅源
-  - jekyll-seo-tag                # 可选：添加 SEO 优化标签
-
-avatar: "/assets/images/avatar.jpg"
-
-toc: true # 全局启用文章目录
+# 自定义配置
+avatar: “/assets/images/avatar.jpg”
+toc: true
 
 # 社媒
 social:
   name:
   email:
-  links:
-    -""
+  links: []
 
-# 自定义变量（可选，可在页面中用 {{ site.my_custom_var }} 引用）
-# 设置默认布局（可选）
+# Markdown 渲染
+markdown: kramdown
+highlighter: rouge
+
+#  permalink 格式
+permalink: /posts/:year/:month/:day/:title/
+
+# GitHub Pages 构建设置
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 默认布局
 defaults:
   - scope:
-      path: ""            # 路径为空表示适用于所有文件
-      type: "posts"       # 指定类型为“文章”
+      path: “”
+      type: “posts”
     values:
-      layout: "post"      # 为所有文章应用“post”布局
-      author: "weiwei"    # 为所有文章设置默认作者
+      layout: post
+      author: weiwei
